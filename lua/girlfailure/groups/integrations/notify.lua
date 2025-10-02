@@ -3,21 +3,21 @@ local P = require('girlfailure.palette')
 local base = {
     highlights = {
         -- Base frame used when Noice hands off to notify
-        NotifyBackground = { bg = P.bg0 },
-        NotifySeparator = { fg = P.electric_violet, bg = P.bg0 },
+        NotifyBackground = { bg = P.ui.float_bg },
+        NotifySeparator = { fg = P.ui.border, bg = P.ui.float_bg },
 
         -- Optional log view groups (if you ever open :Notify,
         NotifyLogTime = { fg = P.muted },
-        NotifyLogTitle = { fg = P.neon_green, bold = true },
+        NotifyLogTitle = { fg = P.ui.title, bold = true },
     },
 }
 
 local levels = {
-    ERROR = P.harsh_magenta, -- loud and unmistakable
-    WARN = P.sickly_yellow,
-    INFO = P.slime_green,
-    DEBUG = P.pale_lilac,
-    TRACE = P.neon_green,
+    ERROR = P.semantic.error, -- loud and unmistakable
+    WARN = P.semantic.warning,
+    INFO = P.semantic.info,
+    DEBUG = P.semantic.hint,
+    TRACE = P.semantic.ok,
 }
 
 -- Helper to define a level pack
