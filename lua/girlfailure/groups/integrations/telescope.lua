@@ -10,7 +10,7 @@ return {
         TelescopePromptNormal      = { fg = P.fg, bg = P.ui.bg_alt },
         TelescopePromptBorder      = { fg = P.semantic.accent_secondary, bg = P.ui.bg_alt },
         TelescopePromptTitle       = { fg = P.ui.search_fg, bg = P.semantic.accent_secondary, bold = true },
-        TelescopePromptPrefix      = { fg = P.semantic.accent_secondary, bg = P.ui.bg_alt },
+        TelescopePromptPrefix      = { fg = P.semantic.number, bg = P.ui.bg_alt },
 
         -- Results
         TelescopeResultsNormal     = { fg = P.fg, bg = P.ui.float_bg },

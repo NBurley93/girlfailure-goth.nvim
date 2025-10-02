@@ -9,49 +9,60 @@ local function hi(fg, bg, bold)
     }
 end
 
--- Mode colors:
--- normal  = neon green
--- insert  = electric violet
--- visual  = acid teal
--- replace = rose red
--- command = sickly yellow
--- terminal= cursor glow
-local M = {
-  normal = {
-    a = hi(P.bg0, P.biohazard_lime, true),
-    b = hi(P.fg,  P.bg1),
-    c = hi(P.fg,  P.bg0),
-  },
-  insert = {
-    a = hi(P.search_fg, P.violent_violet, true),
-    b = hi(P.fg,        P.bg1),
-    c = hi(P.fg,        P.bg0),
-  },
-  visual = {
-    a = hi(P.search_fg, P.neon_cyan, true),
-    b = hi(P.fg,        P.bg1),
-    c = hi(P.fg,        P.bg0),
-  },
-  replace = {
-    a = hi(P.search_fg, P.rose_red, true),
-    b = hi(P.fg,        P.bg1),
-    c = hi(P.fg,        P.bg0),
-  },
-  command = {
-    a = hi(P.bg0, P.sickly_yellow, true),
-    b = hi(P.fg,  P.bg1),
-    c = hi(P.fg,  P.bg0),
-  },
-  terminal = {
-    a = hi(P.bg0, P.cursor_glow, true),
-    b = hi(P.fg,  P.bg1),
-    c = hi(P.fg,  P.bg0),
-  },
-  inactive = {
-    a = hi(P.muted, P.bg1),
-    b = hi(P.muted, P.bg1),
-    c = hi(P.muted, P.bg0),
-  },
+-- Stable surfaces for readability
+local PANEL_BG   = P.ui.statusline_bg
+local PANEL_FG   = P.ui.statusline_fg
+local PANEL_BG_N = P.ui.statusline_nc
+
+-- Mode accents: single bright stripe on 'a' only
+local ACCENT     = {
+    normal   = P.semantic.accent_primary, -- hot pink
+    insert   = P.violet["600"],         -- royal violet
+    visual   = P.teal["500"],           -- cool contrast
+    replace  = P.red["500"],            -- danger
+    command  = P.amber["400"],          -- golden command
+    terminal = P.cyan["500"],           -- terminal tint
+}
+
+-- High-contrast text for the bright accent stripe
+local A_FG       = P.ui.search_fg -- near-black, readable atop bright hues
+
+local M          = {
+    normal = {
+        a = hi(A_FG, ACCENT.normal, true),
+        b = hi(PANEL_FG, PANEL_BG),
+        c = hi(PANEL_FG, PANEL_BG),
+    },
+    insert = {
+        a = hi(A_FG, ACCENT.insert, true),
+        b = hi(PANEL_FG, PANEL_BG),
+        c = hi(PANEL_FG, PANEL_BG),
+    },
+    visual = {
+        a = hi(A_FG, ACCENT.visual, true),
+        b = hi(PANEL_FG, PANEL_BG),
+        c = hi(PANEL_FG, PANEL_BG),
+    },
+    replace = {
+        a = hi(A_FG, ACCENT.replace, true),
+        b = hi(PANEL_FG, PANEL_BG),
+        c = hi(PANEL_FG, PANEL_BG),
+    },
+    command = {
+        a = hi(A_FG, ACCENT.command, true),
+        b = hi(PANEL_FG, PANEL_BG),
+        c = hi(PANEL_FG, PANEL_BG),
+    },
+    terminal = {
+        a = hi(A_FG, ACCENT.terminal, true),
+        b = hi(PANEL_FG, PANEL_BG),
+        c = hi(PANEL_FG, PANEL_BG),
+    },
+    inactive = {
+        a = hi(P.muted, PANEL_BG_N),
+        b = hi(P.muted, PANEL_BG_N),
+        c = hi(P.muted, PANEL_BG_N),
+    },
 }
 
 return M

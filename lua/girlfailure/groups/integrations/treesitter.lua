@@ -5,100 +5,100 @@ return {
     highlights = {
         -- Core text-ish
         ["@comment"]               = { fg = P.muted, italic = true },
-        ["@comment.todo"]          = { fg = P.toxic_tangerine, bold = true },
-        ["@comment.note"]          = { fg = P.glacial_mint, bold = true },
-        ["@comment.warning"]       = { fg = P.candlelight_yellow, bold = true },
-        ["@comment.error"]         = { fg = P.harsh_magenta, bold = true },
+        ["@comment.todo"]          = { fg = P.amber["400"], bold = true },
+        ["@comment.note"]          = { fg = P.teal["400"], bold = true },
+        ["@comment.warning"]       = { fg = P.amber["400"], bold = true },
+        ["@comment.error"]         = { fg = P.red["500"], bold = true },
 
-        ["@string"]                = { fg = P.electric_violet },
-        ["@string.escape"]         = { fg = P.neon_green, bold = true },
-        ["@string.special"]        = { fg = P.toxic_aqua },
-        ["@character"]             = { fg = P.lurid_seafoam },
+        ["@string"]                = { fg = P.semantic.string },              -- green 400
+        ["@string.escape"]         = { fg = P.pink["600"], bold = true },     -- neon pop
+        ["@string.special"]        = { fg = P.rose["500"] },
+        ["@character"]             = { fg = P.teal["400"] },
 
-        ["@number"]                = { fg = P.faded_gold }, -- separated from constants
-        ["@boolean"]               = { fg = P.ecto_magenta, bold = true },
-        ["@float"]                 = { fg = P.faded_gold },
+        ["@number"]                = { fg = P.semantic.number }, -- amber 500
+        ["@boolean"]               = { fg = P.magenta["600"], bold = true },
+        ["@float"]                 = { fg = P.semantic.number },
 
         -- Identifiers
         ["@variable"]              = { fg = P.fg },
-        ["@variable.builtin"]      = { fg = P.haunted_lavender, italic = true },
-        ["@variable.parameter"]    = { fg = P.pale_lilac },
-        ["@variable.member"]       = { fg = P.neon_cyan }, -- fields pop cyan
-        ["@field"]                 = { fg = P.neon_cyan },
-        ["@property"]              = { fg = P.pastel_poison_green },
+        ["@variable.builtin"]      = { fg = P.violet["300"], italic = true },
+        ["@variable.parameter"]    = { fg = P.violet["300"] }, -- pale lilac analog
+        ["@variable.member"]       = { fg = P.cyan["500"] },
+        ["@field"]                 = { fg = P.cyan["500"] },
+        ["@property"]              = { fg = P.teal["400"] },
 
-        ["@constant"]              = { fg = P.rose_red },
-        ["@constant.builtin"]      = { fg = P.infrared_pink, bold = true },
-        ["@constant.macro"]        = { fg = P.rust_red, italic = true },
+        ["@constant"]              = { fg = P.rose_red }, -- red 500
+        ["@constant.builtin"]      = { fg = P.pink["600"], bold = true },
+        ["@constant.macro"]        = { fg = P.orange["500"], italic = true },
 
-        ["@namespace"]             = { fg = P.bruise_blue, bold = true },
-        ["@symbol"]                = { fg = P.acid_teal },
+        ["@namespace"]             = { fg = P.blue["500"], bold = true },
+        ["@symbol"]                = { fg = P.cyan["500"] },
 
         -- Types
-        ["@type"]                  = { fg = P.violent_violet, bold = true },
-        ["@type.builtin"]          = { fg = P.ultraviolet_blue, italic = true },
-        ["@type.definition"]       = { fg = P.violent_violet, bold = true },
-        ["@type.qualifier"]        = { fg = P.biohazard_lime },
+        ["@type"]                  = { fg = P.violet["600"], bold = true },
+        ["@type.builtin"]          = { fg = P.indigo["500"], italic = true },
+        ["@type.definition"]       = { fg = P.violet["600"], bold = true },
+        ["@type.qualifier"]        = { fg = P.lime["600"] },
 
         -- Functions
-        ["@function"]              = { fg = P.acid_teal, bold = true },
-        ["@function.builtin"]      = { fg = P.glacial_mint, italic = true },
-        ["@function.macro"]        = { fg = P.neon_green, bold = true },
-        ["@constructor"]           = { fg = P.toxic_aqua },
-        ["@method"]                = { fg = P.acid_teal },
+        ["@function"]              = { fg = P.semantic.func, bold = true },   -- pink 600
+        ["@function.builtin"]      = { fg = P.magenta["500"], italic = true },
+        ["@function.macro"]        = { fg = P.amber["400"], bold = true },
+        ["@constructor"]           = { fg = P.cyan["500"] },
+        ["@method"]                = { fg = P.semantic.func },
 
         -- Keywords & flow
-        ["@keyword"]               = { fg = P.neon_green, bold = true },
-        ["@keyword.function"]      = { fg = P.lurid_seafoam, bold = true },
-        ["@keyword.operator"]      = { fg = P.neon_green },
-        ["@keyword.return"]        = { fg = P.neon_green },
+        ["@keyword"]               = { fg = P.semantic.keyword, bold = true }, -- violet 500
+        ["@keyword.function"]      = { fg = P.pink["600"], bold = true },
+        ["@keyword.operator"]      = { fg = P.violet["500"] },
+        ["@keyword.return"]        = { fg = P.violet["600"], bold = true },
 
-        ["@conditional"]           = { fg = P.ecto_magenta, bold = true }, -- if/else stand out
-        ["@repeat"]                = { fg = P.ecto_magenta },
-        ["@label"]                 = { fg = P.hyper_blue },
-        ["@include"]               = { fg = P.neon_cyan },
-        ["@exception"]             = { fg = P.wine_red, bold = true },
+        ["@conditional"]           = { fg = P.magenta["600"], bold = true },
+        ["@repeat"]                = { fg = P.magenta["600"] },
+        ["@label"]                 = { fg = P.blue["500"] },
+        ["@include"]               = { fg = P.cyan["500"] },
+        ["@exception"]             = { fg = P.red["500"], bold = true },
 
         -- Operators & punctuation
         ["@operator"]              = { fg = P.fg },
-        ["@punctuation.delimiter"] = { fg = P.ash_gray },
-        ["@punctuation.bracket"]   = { fg = P.ash_gray },
-        ["@punctuation.special"]   = { fg = P.neon_green },
+        ["@punctuation.delimiter"] = { fg = P.muted },
+        ["@punctuation.bracket"]   = { fg = P.muted },
+        ["@punctuation.special"]   = { fg = P.pink["600"] },
 
         -- Tags (HTML/TSX/etc.)
-        ["@tag"]                   = { fg = P.acid_teal, bold = true },
-        ["@tag.attribute"]         = { fg = P.haunted_lavender },
-        ["@tag.delimiter"]         = { fg = P.gunmetal },
+        ["@tag"]                   = { fg = P.teal["400"], bold = true },
+        ["@tag.attribute"]         = { fg = P.rose["300"] },
+        ["@tag.delimiter"]         = { fg = P.ui.border },
 
         -- Diffs (when TS annotates)
-        ["@diff.plus"]             = { fg = P.neon_green },
-        ["@diff.minus"]            = { fg = P.rose_red },
-        ["@diff.delta"]            = { fg = P.sickly_yellow },
+        ["@diff.plus"]             = { fg = P.ui.diff_add_fg },
+        ["@diff.minus"]            = { fg = P.ui.diff_delete_fg },
+        ["@diff.delta"]            = { fg = P.ui.diff_change_fg },
 
-        -- Markdown niceties
+        -- Markdown / markup niceties
         ["@text.title"]            = { fg = P.electric_violet, bold = true },
-        ["@text.strong"]           = { fg = P.bone_white, bold = true },
-        ["@text.emphasis"]         = { fg = P.bone_white, italic = true },
-        ["@text.uri"]              = { fg = P.neon_green, underline = true },
-        ["@text.todo"]             = { fg = P.toxic_tangerine, bold = true },
-        ["@text.note"]             = { fg = P.glacial_mint, bold = true },
-        ["@text.warning"]          = { fg = P.candlelight_yellow, bold = true },
-        ["@text.danger"]           = { fg = P.harsh_magenta, bold = true },
+        ["@text.strong"]           = { fg = P.neutral.fg, bold = true },
+        ["@text.emphasis"]         = { fg = P.neutral.fg, italic = true },
+        ["@text.uri"]              = { fg = P.semantic.link, underline = true },
+        ["@text.todo"]             = { fg = P.amber["400"], bold = true },
+        ["@text.note"]             = { fg = P.teal["400"], bold = true },
+        ["@text.warning"]          = { fg = P.amber["400"], bold = true },
+        ["@text.danger"]           = { fg = P.red["500"], bold = true },
         ["@text.literal"]          = { fg = P.electric_violet },
-        ["@text.reference"]        = { fg = P.pale_lilac },
+        ["@text.reference"]        = { fg = P.violet["300"] },
 
         -- Rainbow-delimiters
         RainbowDelimiterRed        = { fg = P.rose_red },
-        RainbowDelimiterYellow     = { fg = P.candlelight_yellow },
-        RainbowDelimiterBlue       = { fg = P.hyper_blue },
-        RainbowDelimiterOrange     = { fg = P.toxic_tangerine },
-        RainbowDelimiterGreen      = { fg = P.slime_green },
-        RainbowDelimiterViolet     = { fg = P.violent_violet },
-        RainbowDelimiterCyan       = { fg = P.neon_cyan },
+        RainbowDelimiterYellow     = { fg = P.amber["400"] },
+        RainbowDelimiterBlue       = { fg = P.blue["500"] },
+        RainbowDelimiterOrange     = { fg = P.orange["400"] },
+        RainbowDelimiterGreen      = { fg = P.green["400"] },
+        RainbowDelimiterViolet     = { fg = P.violet["600"] },
+        RainbowDelimiterCyan       = { fg = P.cyan["500"] },
 
         -- indent-blankline / ibl
         IblIndent                  = { fg = "#161616" },
-        IblScope                   = { fg = P.line_focus },
+        IblScope                   = { fg = P.ui.cursorline },
     },
 
     links = {
@@ -119,7 +119,7 @@ return {
         ["@lsp.typemod.variable.readonly"] = "@constant",
         ["@lsp.typemod.variable.global"]   = "@variable.builtin",
 
-        -- Old TS* group backfills
+        -- Old TS* group backfills (compat)
         TSComment                          = "@comment",
         TSString                           = "@string",
         TSCharacter                        = "@character",
@@ -155,5 +155,12 @@ return {
         TSPunctSpecial                     = "@punctuation.special",
         TSTag                              = "@tag",
         TSTagDelimiter                     = "@tag.delimiter",
+
+        -- Modern markup aliases (if your TS uses @markup.*)
+        ["@markup.strong"]                 = "@text.strong",
+        ["@markup.italic"]                 = "@text.emphasis",
+        ["@markup.link"]                   = "@text.uri",
+        ["@markup.raw"]                    = "@text.literal",
+        ["@markup.heading"]                = "@text.title",
     },
 }

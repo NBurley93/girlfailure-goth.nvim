@@ -2,26 +2,26 @@ local P = require('girlfailure.palette')
 return {
     highlights = {
         -- Sign column symbols
-        GitSignsAdd = { fg = P.neon_green, bg = P.bg0 },                 -- added lines
-        GitSignsChange = { fg = P.acid_teal, bg = P.bg0 },               -- modified lines
-        GitSignsDelete = { fg = P.rose_red, bg = P.bg0 },                -- removed lines
-        GitSignsTopdelete = { fg = P.rose_red, bg = P.bg0 },             -- top-of-file delete
-        GitSignsChangedelete = { fg = P.sickly_yellow, bg = P.bg0 },     -- modified+deleted
+        GitSignsAdd = { fg = P.ui.git_add, bg = P.bg0 },                 -- added lines
+        GitSignsChange = { fg = P.ui.git_change, bg = P.bg0 },               -- modified lines
+        GitSignsDelete = { fg = P.ui.git_delete, bg = P.bg0 },                -- removed lines
+        GitSignsTopdelete = { fg = P.ui.git_delete, bg = P.bg0 },             -- top-of-file delete
+        GitSignsChangedelete = { fg = P.ui.git_change, bg = P.bg0 },     -- modified+deleted
 
         -- Line highlights (when enabled with `linehl`,
-        GitSignsAddLn = { bg = "#0F2A20" },        -- dark moldy green
-        GitSignsChangeLn = { bg = "#0B1E25" },     -- deep teal shadow
-        GitSignsDeleteLn = { bg = "#260A12" },     -- bruised red
+        GitSignsAddLn = { bg = P.ui.git_add },
+        GitSignsChangeLn = { bg = P.ui.git_change },
+        GitSignsDeleteLn = { bg = P.ui.git_delete },
 
         -- Word diff highlights
-        GitSignsAddInline = { fg = P.neon_green, bg = "#112A1A" },
-        GitSignsChangeInline = { fg = P.acid_teal, bg = "#0F1F29" },
-        GitSignsDeleteInline = { fg = P.rose_red, bg = "#2A0F17" },
+        GitSignsAddInline = { fg = P.ui.diff_add_fg, bg = P.ui.diff_add_bg },
+        GitSignsChangeInline = {  fg = P.ui.diff_change_fg, bg = P.ui.diff_change_bg },
+        GitSignsDeleteInline = { fg = P.ui.diff_delete_fg, bg = P.ui.diff_delete_bg },
 
         -- Current line blame (pairs with what we set earlier in virtualtext.lua,
-        GitSignsCurrentLineBlame = { fg = P.sickly_yellow, italic = true },
+        GitSignsCurrentLineBlame = { fg = P.amber["300"], italic = true },
 
         -- Preview window border
-        GitSignsPreviewBorder = { fg = P.electric_violet, bg = P.bg0 },
+        GitSignsPreviewBorder = { fg = P.red["700"], bg = P.bg0 },
     },
 }
