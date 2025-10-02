@@ -5,7 +5,7 @@ M.utils = require('girlfailure.utils')
 M.editor_groups = require('girlfailure.groups.editor')
 
 function M.setup(user_conf)
-    M.utils.process_groups(M.editor_groups.get(M.palette))
+    M.utils.process_groups(M.editor_groups)
 
     -- Load all integrations
     local integration_modules = vim.api.nvim_get_runtime_file('lua/girlfailure/groups/integrations/*.lua', true)
