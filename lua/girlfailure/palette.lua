@@ -221,6 +221,8 @@ P.semantic = {
   hint    = P.violet["600"],
   ok      = P.green["500"],
 
+  transparent = nil,
+
   accent_primary   = P.pink["600"],
   accent_secondary = P.magenta["500"],
   accent_tertiary  = P.rose["500"],
@@ -237,7 +239,7 @@ P.semantic = {
 
 -- UI tokens (backgrounds, borders, selections, etc.)
 P.ui = {
-  bg            = P.neutral.bg0,
+  bg            = P.semantic.transparent,
   bg_alt        = P.neutral.bg2,
   bg_subtle     = P.neutral.bg3,
   border        = P.neutral.bg4,
@@ -316,6 +318,7 @@ P.fg  = P.neutral.fg
 P.fg0 = P.neutral.fg0
 P.fg1 = P.neutral.fg1
 P.muted = P.neutral.muted
+
 
 -- Legacy names you used earlier
 P.electric_violet  = P.violet["600"]
