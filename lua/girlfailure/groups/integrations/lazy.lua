@@ -4,63 +4,62 @@ local P = require("girlfailure.palette")
 return {
     highlights = {
         -- Main surface
-        LazyNormal            = { fg = P.fg, bg = P.bg0 },
+        LazyNormal            = { fg = P.fg, bg = P.ui.float_bg },
 
-        -- Section headers: poison apple = neon green + royal violet
-        LazyH1                = { fg = P.neon_green, bg = P.violent_violet, bold = true },
-        LazyH2                = { fg = P.pastel_poison_green, bg = P.bg1, bold = true },
+        -- Section headers: neon green on royal violet
+        LazyH1                = { fg = P.neon_green, bg = P.electric_violet, bold = true },
+        LazyH2                = { fg = P.semantic.accent_primary, bg = P.ui.bg_alt, bold = true },
 
         -- Buttons
-        -- idle: subtle green on panel; active: inverted, readable pop
-        LazyButton            = { fg = P.pastel_poison_green, bg = P.bg1, bold = true },
-        LazyButtonActive      = { fg = P.search_fg, bg = P.electric_violet, bold = true },
-        LazyButtonInactive    = { fg = P.muted, bg = P.bg1 },
+        LazyButton            = { fg = P.semantic.accent_primary, bg = P.ui.bg_alt, bold = true },
+        LazyButtonActive      = { fg = P.ui.search_fg, bg = P.electric_violet, bold = true },
+        LazyButtonInactive    = { fg = P.muted, bg = P.ui.bg_alt },
 
-        -- Lists, props, dim text (no cyan)
+        -- Lists, props, dim text
         LazyComment           = { fg = P.muted, italic = true },
-        LazyProp              = { fg = P.bruise_blue }, -- labels: cool muted blue
+        LazyProp              = { fg = P.blue["400"] },
         LazyDimmed            = { fg = P.muted },
 
-        -- Reasons (why a plugin loaded) — grouped by color family
-        LazyReasonCmd         = { fg = P.lurid_seafoam },
-        LazyReasonImport      = { fg = P.lurid_seafoam },
-        LazyReasonRequire     = { fg = P.lurid_seafoam },
+        -- Reasons (why a plugin loaded)
+        LazyReasonCmd         = { fg = P.teal["400"] },
+        LazyReasonImport      = { fg = P.teal["400"] },
+        LazyReasonRequire     = { fg = P.teal["400"] },
 
-        LazyReasonEvent       = { fg = P.candlelight_yellow },
-        LazyReasonStart       = { fg = P.neon_green },
+        LazyReasonEvent       = { fg = P.amber["400"] },
+        LazyReasonStart       = { fg = P.semantic.accent_secondary },
 
-        LazyReasonFt          = { fg = P.haunted_lavender },
-        LazyReasonRuntime     = { fg = P.haunted_lavender },
+        LazyReasonFt          = { fg = P.violet["300"] },
+        LazyReasonRuntime     = { fg = P.violet["300"] },
 
         LazyReasonPlugin      = { fg = P.electric_violet },
-        LazyReasonKeys        = { fg = P.neon_green },
-        LazyReasonSource      = { fg = P.neon_green },
+        LazyReasonKeys        = { fg = P.semantic.accent_secondary },
+        LazyReasonSource      = { fg = P.semantic.accent_secondary },
 
         -- Progress + statuses
-        LazyProgressDone      = { fg = P.neon_green },
+        LazyProgressDone      = { fg = P.semantic.accent_secondary },
         LazyProgressTodo      = { fg = P.muted },
         LazyTaskOutput        = { fg = P.fg },
 
         -- Git-ish bits inside Lazy panes
-        LazyCommit            = { fg = P.haunted_lavender },
-        LazyCommitIssue       = { fg = P.neon_green, underline = true },
+        LazyCommit            = { fg = P.violet["300"] },
+        LazyCommitIssue       = { fg = P.semantic.accent_secondary, underline = true },
         LazyNoCond            = { fg = P.rose_red },
-        LazyLocal             = { fg = P.violent_violet },
+        LazyLocal             = { fg = P.electric_violet },
 
         -- Links and paths
-        LazyDir               = { fg = P.bruise_blue, bold = true }, -- directory names: structural, not teal
-        LazyUrl               = { fg = P.neon_green, underline = true },
-        LazyKey               = { fg = P.pale_lilac, bold = true },
-        LazyValue             = { fg = P.electric_violet },
+        LazyDir               = { fg = P.blue["500"], bold = true },
+        LazyUrl               = { fg = P.semantic.accent_secondary, underline = true },
+        LazyKey               = { fg = P.semantic.keyword, bold = true },
+        LazyValue             = { fg = P.semantic.string },
 
-        -- Diagnostics inside Lazy (align to global)
-        LazyError             = { fg = P.harsh_magenta, bold = true },
-        LazyWarning           = { fg = P.sickly_yellow, bold = true },
-        LazyInfo              = { fg = P.acid_teal, bold = true }, -- single cameo; feel free to swap to glacial_mint
-        LazySpecial           = { fg = P.rose_red, bold = true },
+        -- Diagnostics inside Lazy
+        LazyError             = { fg = P.semantic.error, bold = true },
+        LazyWarning           = { fg = P.semantic.warning, bold = true },
+        LazyInfo              = { fg = P.semantic.info, bold = true },
+        LazySpecial           = { fg = P.semantic.hint, bold = true },
 
         -- Descriptions / help
         LazyButtonDescription = { fg = P.muted },
-        LazyHelpHeader        = { fg = P.neon_green, bold = true },
+        LazyHelpHeader        = { fg = P.semantic.accent_secondary, bold = true },
     },
 }
