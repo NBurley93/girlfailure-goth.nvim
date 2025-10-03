@@ -4,16 +4,16 @@ local P = require("girlfailure.palette")
 return {
     highlights = {
         -- Main surface
-        LazyNormal            = { fg = P.fg, bg = P.ui.bg_alt2 },
+        LazyNormal            = { fg = P.fg, bg = P.ui.bg_alt },
 
-        -- Section headers: neon green on royal violet
-        LazyH1                = { fg = P.neon_green, bg = P.electric_violet, bold = true },
-        LazyH2                = { fg = P.semantic.accent_primary, bg = P.ui.bg_alt, bold = true },
+        -- Section headers
+        LazyH1                = { fg = P.semantic.number, bg = P.ui.bg_alt2, bold = true },
+        LazyH2                = { fg = P.semantic.accent_secondary, bg = P.ui.bg_alt, bold = true },
 
         -- Buttons
-        LazyButton            = { fg = P.semantic.accent_primary, bg = P.ui.bg_alt, bold = true },
-        LazyButtonActive      = { fg = P.ui.search_fg, bg = P.electric_violet, bold = true },
-        LazyButtonInactive    = { fg = P.muted, bg = P.ui.bg_alt },
+        LazyButton            = { fg = P.semantic.accent_secondary, bg = P.ui.bg_alt2, bold = true },
+        LazyButtonActive      = { fg = P.ui.search_fg, bg = P.semantic.accent_primary, bold = true },
+        LazyButtonInactive    = { fg = P.muted, bg = P.ui.bg_alt2 },
 
         -- Lists, props, dim text
         LazyComment           = { fg = P.muted, italic = true },
@@ -31,7 +31,7 @@ return {
         LazyReasonFt          = { fg = P.violet["300"] },
         LazyReasonRuntime     = { fg = P.violet["300"] },
 
-        LazyReasonPlugin      = { fg = P.electric_violet },
+        LazyReasonPlugin      = { fg = P.violet["600"] },
         LazyReasonKeys        = { fg = P.semantic.accent_secondary },
         LazyReasonSource      = { fg = P.semantic.accent_secondary },
 
@@ -44,19 +44,19 @@ return {
         LazyCommit            = { fg = P.violet["300"] },
         LazyCommitIssue       = { fg = P.semantic.accent_secondary, underline = true },
         LazyNoCond            = { fg = P.rose_red },
-        LazyLocal             = { fg = P.electric_violet },
+        LazyLocal             = { fg = P.orange["500"] },
 
         -- Links and paths
         LazyDir               = { fg = P.blue["500"], bold = true },
         LazyUrl               = { fg = P.semantic.accent_secondary, underline = true },
-        LazyKey               = { fg = P.semantic.keyword, bold = true },
+        LazyKey               = { fg = P.semantic.number, bold = true },
         LazyValue             = { fg = P.semantic.string },
 
         -- Diagnostics inside Lazy
         LazyError             = { fg = P.semantic.error, bold = true },
         LazyWarning           = { fg = P.semantic.warning, bold = true },
         LazyInfo              = { fg = P.semantic.info, bold = true },
-        LazySpecial           = { fg = P.semantic.hint, bold = true },
+        LazySpecial           = { fg = P.amber["500"], bold = true },
 
         -- Descriptions / help
         LazyButtonDescription = { fg = P.muted },
