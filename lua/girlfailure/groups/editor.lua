@@ -15,6 +15,9 @@ return {
         Constant        = { fg = P.rose_red },
         Error           = { fg = P.semantic.error, bold = true },
 
+        Special        = { fg = P.semantic.hint, bold = true },
+        Type            = { fg = P.amber["400"], bold = true },
+
         -- search & statusline
         StatusLine      = { fg = P.ui.statusline_fg, bg = P.ui.statusline_bg, bold = true },
         Search          = { fg = P.ui.search_fg, bg = P.ui.search_bg, bold = true },
