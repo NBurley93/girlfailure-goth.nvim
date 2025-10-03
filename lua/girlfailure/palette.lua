@@ -241,6 +241,7 @@ P.semantic = {
 P.ui       = {
     bg                           = P.semantic.transparent,
     bg_alt                       = P.neutral.bg2,
+    bg_alt2                      = P.neutral.bg1,
     bg_subtle                    = P.neutral.bg3,
     border                       = P.semantic.accent_tertiary,
     float_bg                     = P.neutral.bg2,

@@ -4,7 +4,7 @@ local P = require("girlfailure.palette")
 return {
     highlights = {
         -- Main surface
-        LazyNormal            = { fg = P.fg, bg = P.ui.bg_alt },
+        LazyNormal            = { fg = P.fg, bg = P.ui.bg_alt2 },
 
         -- Section headers: neon green on royal violet
         LazyH1                = { fg = P.neon_green, bg = P.electric_violet, bold = true },
