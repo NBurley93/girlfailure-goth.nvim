@@ -2,16 +2,16 @@
 -- A shamelessly overstocked palette so you never run out of shades mid-tweak.
 -- Dark theme. Pink-forward. Not allergic to other colors.
 
-local P    = {}
+local P         = {}
 
-P.meta     = {
+P.meta          = {
     name = "girlfailure-goth",
     background = "dark",
     author = "you (+ an begrudging assistant)",
 }
 
 -- Neutrals / grayscale ramp (velvet-black to bone-white)
-P.neutral  = {
+P.neutral       = {
     bg0   = "#0B0B0C", -- canvas
     bg1   = "#121214",
     bg2   = "#1C1C1E", -- panel
@@ -27,7 +27,7 @@ P.neutral  = {
 }
 
 -- Primary pinks (signature)
-P.pink     = {
+P.pink          = {
     ["100"] = "#FCE8F1",
     ["200"] = "#F8D7E9",
     ["300"] = "#F6AFC5",
@@ -40,7 +40,7 @@ P.pink     = {
 }
 
 -- Dusty rose family
-P.rose     = {
+P.rose          = {
     ["100"] = "#F6E2E7",
     ["200"] = "#EDC2CF",
     ["300"] = "#E2A3B7",
@@ -53,7 +53,7 @@ P.rose     = {
 }
 
 -- Magenta / lilac
-P.magenta  = {
+P.magenta       = {
     ["100"] = "#F8E6F0",
     ["200"] = "#F0C9E0",
     ["300"] = "#E9ACD0",
@@ -66,7 +66,7 @@ P.magenta  = {
 }
 
 -- Violet / purple
-P.violet   = {
+P.violet        = {
     ["100"] = "#EEE4F3",
     ["200"] = "#D6C2E5",
     ["300"] = "#BEA0D7",
@@ -79,7 +79,7 @@ P.violet   = {
 }
 
 -- Reds / crimson
-P.red      = {
+P.red           = {
     ["100"] = "#F3D4DB",
     ["200"] = "#E7A9B7",
     ["300"] = "#DB7E93",
@@ -92,7 +92,7 @@ P.red      = {
 }
 
 -- Oranges / amber
-P.orange   = {
+P.orange        = {
     ["100"] = "#FFEFE6",
     ["200"] = "#FFD3B8",
     ["300"] = "#FFB88A",
@@ -103,7 +103,7 @@ P.orange   = {
     ["800"] = "#8F3E00",
     ["900"] = "#662B00",
 }
-P.amber    = {
+P.amber         = {
     ["100"] = "#FFF7E6",
     ["200"] = "#FFE8B8",
     ["300"] = "#FFD98A",
@@ -116,7 +116,7 @@ P.amber    = {
 }
 
 -- Yellows / gold
-P.yellow   = {
+P.yellow        = {
     ["100"] = "#FFF9E8",
     ["200"] = "#FFF0BF",
     ["300"] = "#FFE596",
@@ -129,7 +129,7 @@ P.yellow   = {
 }
 
 -- Greens
-P.green    = {
+P.green         = {
     ["100"] = "#E6F4EA",
     ["200"] = "#C6E7CF",
     ["300"] = "#A6DAB5",
@@ -140,7 +140,7 @@ P.green    = {
     ["800"] = "#2E623F",
     ["900"] = "#1F3F2A",
 }
-P.lime     = {
+P.lime          = {
     ["100"] = "#F3F8E6",
     ["200"] = "#E1F0C4",
     ["300"] = "#CFE8A2",
@@ -153,7 +153,7 @@ P.lime     = {
 }
 
 -- Teals & cyans
-P.teal     = {
+P.teal          = {
     ["100"] = "#E6F5F1",
     ["200"] = "#C4E8DD",
     ["300"] = "#A2DBCA",
@@ -164,7 +164,7 @@ P.teal     = {
     ["800"] = "#276253",
     ["900"] = "#1A4037",
 }
-P.cyan     = {
+P.cyan          = {
     ["100"] = "#E6F6F7",
     ["200"] = "#C4E9ED",
     ["300"] = "#A2DCE3",
@@ -177,7 +177,7 @@ P.cyan     = {
 }
 
 -- Blues / indigo
-P.blue     = {
+P.blue          = {
     ["100"] = "#E6ECF7",
     ["200"] = "#C5D3F0",
     ["300"] = "#A3B9E8",
@@ -188,7 +188,7 @@ P.blue     = {
     ["800"] = "#2A4A80",
     ["900"] = "#1B3055",
 }
-P.indigo   = {
+P.indigo        = {
     ["100"] = "#E9E7F9",
     ["200"] = "#D0CCF2",
     ["300"] = "#B7B1EB",
@@ -199,9 +199,20 @@ P.indigo   = {
     ["800"] = "#383672",
     ["900"] = "#232347",
 }
+P.pastel_blue   = {
+    ["100"] = "#E6F0FA",
+    ["200"] = "#C4D9F5",
+    ["300"] = "#A2C2F0",
+    ["400"] = "#7FAAEB",
+    ["500"] = "#5C92E6",
+    ["600"] = "#3F7AD1",
+    ["700"] = "#2E5E9F",
+    ["800"] = "#20476F",
+    ["900"] = "#122F40",
+}
 
 -- Browns
-P.brown    = {
+P.brown         = {
     ["100"] = "#F2EAE6",
     ["200"] = "#E0CEC7",
     ["300"] = "#CDB2A7",
@@ -213,8 +224,21 @@ P.brown    = {
     ["900"] = "#352924",
 }
 
+-- Gyaru Blonde
+P.yellow_blonde = {
+    ["100"] = "#FFF8E6",
+    ["200"] = "#FFEDB8",
+    ["300"] = "#FFE28A",
+    ["400"] = "#FFD65C",
+    ["500"] = "#FFC940",
+    ["600"] = "#E0AD28",
+    ["700"] = "#B58A1F",
+    ["800"] = "#8A6817",
+    ["900"] = "#60470F",
+}
+
 -- Semantic tokens (pick your favorites later)
-P.semantic = {
+P.semantic      = {
     error            = P.red["500"],
     warning          = P.orange["400"],
     info             = P.blue["600"],
@@ -228,17 +252,29 @@ P.semantic = {
     accent_tertiary  = P.rose["500"],
 
     link             = P.blue["500"],
-    comment          = P.neutral.muted,
-    string           = P.green["400"],
-    number           = P.amber["500"],
-    keyword          = P.violet["500"],
+    property         = P.yellow_blonde["400"],
+    parameter        = P.violet["300"],
+    member_var       = P.cyan["600"],
+    comment          = P.neutral.dim,
+    comment_todo     = P.amber["400"],
+    comment_note     = P.teal["400"],
+    comment_warning  = P.amber["400"],
+    comment_error    = P.red["500"],
+    string           = P.yellow_blonde["300"],
+    string_escape    = P.magenta["300"],
+    number           = P.yellow_blonde["600"],
+    boolean          = P.magenta["600"],
+    keyword          = P.pastel_blue["400"],
     func             = P.pink["600"],
+    operator         = P.neutral.fg,
+    func_return      = P.magenta["700"],
     type             = P.cyan["500"],
     constant         = P.indigo["500"],
+    variable         = P.pink["400"],
 }
 
 -- UI tokens (backgrounds, borders, selections, etc.)
-P.ui       = {
+P.ui            = {
     bg                           = P.semantic.transparent,
     bg_alt                       = P.neutral.bg2,
     bg_alt2                      = P.neutral.bg1,
@@ -289,7 +325,7 @@ P.ui       = {
 }
 
 -- Terminal / ANSI helpers (optional for termguicolors bridges)
-P.terminal = {
+P.terminal      = {
     black          = P.neutral.bg0,
     red            = P.red["500"],
     green          = P.pink["600"], -- on brand: success is hot pink
@@ -310,20 +346,20 @@ P.terminal = {
 }
 
 -- Convenience aliases (handy for existing highlight defs you already wrote)
-P.bg0      = P.neutral.bg0
-P.bg1      = P.neutral.bg1
-P.bg2      = P.neutral.bg2
-P.bg3      = P.neutral.bg3
-P.bg4      = P.neutral.bg4
-P.fg       = P.neutral.fg
-P.fg0      = P.neutral.fg0
-P.fg1      = P.neutral.fg1
-P.muted    = P.neutral.muted
+P.bg0           = P.neutral.bg0
+P.bg1           = P.neutral.bg1
+P.bg2           = P.neutral.bg2
+P.bg3           = P.neutral.bg3
+P.bg4           = P.neutral.bg4
+P.fg            = P.neutral.fg
+P.fg0           = P.neutral.fg0
+P.fg1           = P.neutral.fg1
+P.muted         = P.neutral.muted
 
 
 -- Legacy names you used earlier
 P.electric_violet = P.violet["600"]
-P.neon_green      = "#39FF88"  -- a true neon for “added” if you want it loud
+P.neon_green      = "#39FF88" -- a true neon for “added” if you want it loud
 P.toxic_tangerine = P.orange["400"]
 P.hyper_blue      = P.blue["500"]
 P.rose_red        = P.red["500"]

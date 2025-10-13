@@ -4,28 +4,28 @@ local P = require("girlfailure.palette")
 return {
     highlights = {
         -- Core text-ish
-        ["@comment"]               = { fg = P.muted, italic = true },
-        ["@comment.todo"]          = { fg = P.amber["400"], bold = true },
-        ["@comment.note"]          = { fg = P.teal["400"], bold = true },
-        ["@comment.warning"]       = { fg = P.amber["400"], bold = true },
-        ["@comment.error"]         = { fg = P.red["500"], bold = true },
+        ["@comment"]               = { fg = P.semantic.comment, italic = true },
+        ["@comment.todo"]          = { fg = P.semantic.comment_todo, bold = true },
+        ["@comment.note"]          = { fg = P.semantic.comment_note, bold = true },
+        ["@comment.warning"]       = { fg = P.semantic.comment_warning, bold = true },
+        ["@comment.error"]         = { fg = P.semantic.comment_error, bold = true },
 
         ["@string"]                = { fg = P.semantic.string },              -- green 400
-        ["@string.escape"]         = { fg = P.pink["600"], bold = true },     -- neon pop
+        ["@string.escape"]         = { fg = P.semantic.string_escape, bold = true },     -- neon pop
         ["@string.special"]        = { fg = P.rose["500"] },
         ["@character"]             = { fg = P.teal["400"] },
 
         ["@number"]                = { fg = P.semantic.number }, -- amber 500
-        ["@boolean"]               = { fg = P.magenta["600"], bold = true },
+        ["@boolean"]               = { fg = P.semantic.boolean, bold = true },
         ["@float"]                 = { fg = P.semantic.number },
 
         -- Identifiers
-        ["@variable"]              = { fg = P.fg },
+        ["@variable"]              = { fg = P.semantic.variable },
         ["@variable.builtin"]      = { fg = P.violet["300"], italic = true },
-        ["@variable.parameter"]    = { fg = P.violet["300"] }, -- pale lilac analog
-        ["@variable.member"]       = { fg = P.cyan["500"] },
+        ["@variable.parameter"]    = { fg = P.semantic.parameter }, -- pale lilac analog
+        ["@variable.member"]       = { fg = P.semantic.member_var },
         ["@field"]                 = { fg = P.cyan["500"] },
-        ["@property"]              = { fg = P.teal["400"] },
+        ["@property"]              = { fg = P.semantic.property },
 
         ["@constant"]              = { fg = P.rose_red }, -- red 500
         ["@constant.builtin"]      = { fg = P.pink["600"], bold = true },
@@ -44,14 +44,14 @@ return {
         ["@function"]              = { fg = P.semantic.func, bold = true },   -- pink 600
         ["@function.builtin"]      = { fg = P.magenta["500"], italic = true },
         ["@function.macro"]        = { fg = P.amber["400"], bold = true },
-        ["@constructor"]           = { fg = P.cyan["500"] },
+        ["@constructor"]           = { fg = P.magenta["500"] },
         ["@method"]                = { fg = P.semantic.func },
 
         -- Keywords & flow
         ["@keyword"]               = { fg = P.semantic.keyword, bold = true }, -- violet 500
-        ["@keyword.function"]      = { fg = P.pink["600"], bold = true },
-        ["@keyword.operator"]      = { fg = P.violet["500"] },
-        ["@keyword.return"]        = { fg = P.violet["600"], bold = true },
+        ["@keyword.function"]      = { fg = P.semantic.func, bold = true },
+        ["@keyword.operator"]      = { fg = P.semantic.operator },
+        ["@keyword.return"]        = { fg = P.semantic.func_return, bold = true },
 
         ["@conditional"]           = { fg = P.magenta["600"], bold = true },
         ["@repeat"]                = { fg = P.magenta["600"] },
