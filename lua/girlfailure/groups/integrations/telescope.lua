@@ -1,5 +1,5 @@
 local P = require("girlfailure.palette")
-local INVISIBLE_BG = true
+local INVISIBLE_BG = false
 local USE_BORDER_BG = true
 
 local function get_border_bg()
