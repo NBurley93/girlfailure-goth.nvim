@@ -37,5 +37,11 @@ return {
         DiffDelete      = { fg = P.ui.diff_delete_fg, bg = P.ui.diff_delete_bg },
         DiffChange      = { fg = P.ui.diff_change_fg, bg = P.ui.diff_change_bg },
         DiffText        = { fg = P.ui.diff_text_fg, bg = P.ui.diff_text_bg },
+
+-- Pmenu
+        Pmenu           = { fg = P.fg, bg = P.ui.pmenu_bg },
+        PmenuSel        = { fg = P.fg, bg = P.ui.visual },
+        PmenuSbar       = { bg = P.ui.pmenu_sbar },
+        PmenuThumb      = { bg = P.electric_violet }
     },
 }
